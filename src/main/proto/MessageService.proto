@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package org.build.grpc;
+
+message MessageRequest{
+  string msg = 1;
+}
+
+message MessageResponse {
+  string hello = 1;
+}
+
+
+service MessageService {
+  rpc hello(MessageRequest) returns(MessageResponse);
+}
